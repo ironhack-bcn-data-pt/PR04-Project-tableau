@@ -1,11 +1,12 @@
 <img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
 
-# Choosing my Next **Desk**tination
+# Choosing my Next *Desk*tination
 
 
 *Anna Vilardell*
 
 *Data Analytics-Part Time Course | Barcelona June 2020*
+
 
 
 ## Content
@@ -14,21 +15,18 @@
 - [Links](#Links)
 
 
+
 ## Project Description
-
-
-### Description
 
 This project is to practice what we've learned in the Business Intelligence chapter of this program. For this project, we've choosen a data set, explore the it using Tableau, and put together a Story for presentation showing the insights we have derived from the data.
 
 
-The dataset chosen is costs of living from diferent cities in the worls  - Direct link [here](https://www.kaggle.com/stephenofarrell/cost-of-living)
-
+The dataset chosen is costs of living from diferent cities in the world  - Direct link [here](https://www.kaggle.com/stephenofarrell/cost-of-living)
 
 
 **Goal**
 
-Choose the right destintation to work remote taking into account 3 main variables: a salary, rent and main costs of living.
+Choose the right destintation to work remote taking into account 3 main variables: salary, rent & main costs of living.
 
 
 
@@ -74,6 +72,7 @@ Other:
     - README.md
 
 
+
 ## Links 
 
-[Repository](https://github.com/AnnaVilardell/PR04-project-statistical-analysis) 
+[Repository](https://github.com/AnnaVilardell/PR05-project-tableau) 
