@@ -18,7 +18,7 @@ The data used has been obtained with the API used in the third project. It inclu
 Once the data from the launches was obtained, I have created another CSV file that includes for each location its coordinates (latitude and longitude).
 
 ## Project Description
-TBD
+The project consists of a little overview of how many rocket launches there have been since 1961 all around the world and what kind of missions they were for.
 
 ## Organization
 The structure in the repository is the following:
@@ -29,4 +29,4 @@ The structure in the repository is the following:
 ## Link
 Here the link to the story:
 
-[Tableau](https://trello.com/en)  
+[Tableau](https://public.tableau.com/views/launchesvisualization/Rocketlaunchstory?:language=es&:display_count=y&publish=yes&:origin=viz_share_link)  
