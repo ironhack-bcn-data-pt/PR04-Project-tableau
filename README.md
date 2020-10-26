@@ -15,7 +15,7 @@ I created the following sheets:
     
 ## Conclutions
 
-Our sales conclusion is that Nintendo, EA, and Ubisoft have the best global sales. Most video game sales in a period of time were between 2001-2015. The games most produced by the company are Action, Sports, and Shooter. The bests games sell are Wii Sports, Grand Theft Auto V, and Super Mario Bros. In the base of the gross sales by genre per developer, I could say that Nintendo diversifies more them incomes than EA sports. The proportion of the sales by region said to me that if I want to develop and sell a video game I will be promoted more in North America than another region because they consume more videogames.
+Our sales conclusion is that Nintendo, EA, and Ubisoft have the best global sales. Most video game sales in a period of time were between 2001-2015. The games most rentability in terms of sales per genre are Action, Sports, and Shooter. The bests game sales were Wii Sports, Grand Theft Auto V, and Super Mario Bros. In the base of the gross sales by genre per developer, I could say that Nintendo could sell different types of genre games in comparison with EA sports that the gross sales are coming from sports games. The proportion of sales by region said to me that the most percentage of gross global sales of video games is in North America.
     
     
     
