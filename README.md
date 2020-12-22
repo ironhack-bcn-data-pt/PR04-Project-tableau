@@ -5,7 +5,7 @@
 I used a data set with the global and regional sales of video games from 1981 until 2016.
 
 I created the following sheets:
-    - Gross Global sell per Developer.    
+    - Gross Global sales per Developer.    
     - Sells 30- Global-EU-JP-NA-Others.
     - Best Seller Games by Genre.
     - Gross Sales per Year/Genre.
