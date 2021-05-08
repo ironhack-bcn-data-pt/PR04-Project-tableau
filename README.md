@@ -65,4 +65,7 @@ This will be useful as an overall gauge of whether you met the project goals, bu
 
 
 # Feb 2021 
-- [Filmaffinity analysis (Borja&Patri)](https://github.com/borjatv/PR04---films)
+- [Filmaffinity analysis (Borja & Patri)](https://github.com/borjatv/PR04---films)
+- [España en llamas (Samu & Joan)](https://github.com/sam132-pascual/Proyecto-04-Incendios-.git)
+- [BCN Restaurants (Xabi & Carlos)](https://github.com/carazaagu/PR04_bcn_restaurants)
+- [Desigualdades BCN (Miki, Xabi, Gloria)](https://github.com/miquel-angel-campuzano/PR04---Desigualdades---BCN)
