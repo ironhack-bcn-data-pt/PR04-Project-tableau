@@ -1,71 +1,83 @@
-![IronHack Logo](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png)
+﻿![IronHack Logo](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png)
 
 # Project: Business Intelligence with Tableau
 
 ## Overview
 
-The goal of this project is for you to practice what you have learned in the Business Intelligence chapter of this program. For this project, you will choose a data set, explore the it using Tableau, and put together a Story for presentation showing the insights you have derived from the data. You should demonstrate your proficiency using Tableau and the concepts you have learned throughout the chapter. The workbook should be saved to Tableau Public and a link to the workbook should be provided.
+El objetivo de este proyecto es el de mostrar cómo han evolucionado la economía de 5 países sudamericanos a lo largo de 4 décadas (1980-2020). Una vez presentados la evolución de los indicadores macroeconómicos más relevantes los comparamos y clasificamos las economías en función de su evolución para cada década.
 
-**You will be working individually for this project**, but we'll be guiding you along the process and helping you as you go. Show us what you've got!
+Queremos también descubrir si la ideología de los gobernantes de cada país a lo largo de los años afecta a la evolución de la economía.
 
 ---
 
-## Technical Requirements
+## Indicadores macroeconómicos y paises
 
-The technical requirements for this project are as follows:
+Los indicadores que han sido seleccionados para mostrar la evolución de cada economía son:
+* Crecimiento anual porcentual del PIB (calculado a precios constantes)
+* Indice de Desarrollo Humano Anual (sólo hay datos a partir de 1990)
+* Tasa de paro anual
+* Deuda Externa Total sobre el PIB anual a precios corrientes (en $) anual.
+* Indice de Precios al Consumidor anual.
 
-* You must construct a Tableau Story consisting of at least 5 story points for the data set you have chosen.
-* You must use Story features such as captions and annotations.
-* You must demonstrate all the concepts we covered in the chapter (sorting, filtering, different visualizations types, aggregations, etc.).
-* Your Tableau workbook consisting of at least 5 visualizations and 1 Story should be saved to Tableau Public.
-* You should create a Github repo for this project, and your data should be saved to that repo in a folder named data.
-* You should also include a README.md file that describes the steps you took, your thought process as you built your visualizations and Story in Tableau, and a link to your workbook on Tableau Public.
+Los países seleccionados han sido:
+* Argentina
+* Brasil
+* Chile
+* Paraguay
+* Venezuela
 
-## Necessary Deliverables
+## Recopilación de datos
 
-The following deliverables should be pushed to your Github repo for this chapter.
+Información de Gobiernos: hemos recopilado datos de presidente, partido e ideología económica de cada país por año a través de escrapear las tablas “Annexo presidentes” de la Wikipedia.
 
-* **A Tableau workbook uploaded to Tableau Public** that contains the visualizations and Story you created from your data set.
-* **An data folder** containing the data set you used for your project.
-* **A ``README.md`` file** containing a detailed explanation of your approach and code for constructing visualizations and organizing them into a Story as well as your results, obstacles encountered, lessons learned, and a link to your completed Tableau workbook.
+No hemos encontrado una fuente de datos que agrupe toda la información necesaria para nuestros indicadores. Por lo tanto, hemos tenido que crear nuestro dataset a partir de varias fuentes de datos:
+* CEPALSTAT: CEPAL es una comisión regional de las Naciones Unidades para América Latina y el Caribe. En su página web CEPALSTAT disponemos una amplia base de datos para estos países. Aquí hemos obtenido datos para el PIB, Tasa de paro, Deuda Externa y IPC.
+* World Bank: Esta institución mundial financiera dispone de una amplia base de datos económicos sobre la mayoría de país del mundo. Aquí hemos obtenido los datos que nos faltaba para el PIB.
+* Programa Naciones Unidas para el Desarrollo: Agencia de las Naciones Unidas cuyo objetivo es la erradicación de la pobreza y la reducción de las desigualdades de los países. En su página web obtenemos datos del IDH desde 1990.
 
-## Suggested Ways to Get Started
+## ETL en Jupyter Notebook
 
-* **Find a data set to process** - a great place to start looking would be [Awesome Public Data Sets](https://github.com/awesomedata/awesome-public-datasets) and [Kaggle Data Sets](https://www.kaggle.com/datasets).
-* **Explore the data set** and come up with a variety of visualizations that you can potentially include in your story.
-* **Break the project down into different steps** - identify the entities/dimensions in your data set, explore them each individually, and then progress to analyzing different combinations of them.
-* **Use the tools in your tool kit** - the concepts and methods you have learned in the business intelligence chapter as well as some of the things you've learned in previous chapters. This is a great way to start tying everything you've learned together!
-* **Work through the lessons in class** & ask questions when you need to! Think about adding relevant code to your project each night, instead of, you know... _procrastinating_.
-* **Commit early, commit often**, don’t be afraid of doing something incorrectly because you can always roll back to a previous version.
-* **Consult documentation and resources provided** to better understand the tools you are using and how to accomplish what you want.
+# Procesos iniciales
+* Hemos importado CSV y archivos JSON.
+* Hemos transformado los datos para que sean homólogos y hemos creado 14 tablas diferentes para relacionarlas en una base de datos relacional cargada en PostgreSQL.
+# Procesos posteriores
+* Desde tableau hemos agrupado los indicadores por décadas y hemos generado un ranking por países a partir de una valoración subjetiva de los indicadores de cada país. La clasificación se ha guardado en un Excel. Este Excel se ha cargado en el notebook y se ha subido y relacionado en la base de datos de PostgreSQL.
+* Investigando la historia económica de cada país hemos creado un Excel con la explicación de las políticas económicas de cada país en cada década.
 
-## Useful Resources
+## Tableau
 
-* [Tableau Getting Started Tutorial](https://onlinehelp.tableau.com/current/guides/get-started-tutorial/en-us/get-started-tutorial-home.html)
-* [Tableau Training Videos](https://www.tableau.com/learn/training)
-* [Tableau Learning Library](https://onlinehelp.tableau.com/current/guides/get-started-tutorial/en-us/get-started-tutorial-next.html)
+Hemos creado gráficos para cada indicador y para cada década y lo hemos relacionado todo en 5 dashboards (4 décadas y 1 acumulado)
 
-## Project Feedback + Evaluation
+## Presentación
 
-* __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
+Hemos publicado los dashboards en tableau public y los hemos incrustado en una página web para crear una historia visual a partir de un scroll
 
-* __Creativity__: Did you add a personal spin or creative element into your project submission? Did you incorporate domain knowledge or unique perspective into your analysis.
+## Conclusiones
 
-* __Code Quality__: Did you follow code style guidance and best practices covered in class?
+Se observa que si bien los países que han tendido a tener gobiernos de ideología neoliberal han presentado mejores indicadores no podemos afirmar que sea determinante. Por ejemplo en Chile se fue alternando gobernantes liberales y socialdemócratas y no afectó a su evolución económica. 
 
-* __Total__: Your instructors will give you a total score on your project between:
-
-    **Score**|**Expectations**
-    -----|-----
-    0|Does not meet expectations
-    1|Meets expectactions, good job!
-    2|Exceeds expectations, you wonderful creature, you!
-
-This will be useful as an overall gauge of whether you met the project goals, but __the more important scores are described in the specs above__, which can help you identify where to focus your efforts for the next project!
+Un indicador con mayor relevancia podría ser la estabilidad social/política. Por ejemplo: Chile y Paraguay versus Argentina y Venezuela.
 
 
-# Feb 2021 
-- [Filmaffinity analysis (Borja & Patri)](https://github.com/borjatv/PR04---films)
-- [España en llamas (Samu & Joan)](https://github.com/sam132-pascual/Proyecto-04-Incendios-.git)
-- [BCN Restaurants (Xabi & Carlos)](https://github.com/carazaagu/PR04_bcn_restaurants)
-- [Desigualdades BCN (Miki, Xabi, Gloria)](https://github.com/miquel-angel-campuzano/PR04---Desigualdades---BCN)
+
+## Que hemos aprendido?
+- Busqueda de datos abiertos
+- Scrapping de tablas no estructuradas
+- Planificacion y manejo de base de datos (Postgresql)
+- Tableau
+- Html
+
+## Enlaces al resultado:
+- 1980: https://public.tableau.com/app/profile/sergio7692/viz/1980SergioCarlos/Dashboard_80s
+- 1990: https://public.tableau.com/app/profile/sergio7692/viz/1990SergioCarlos/Dashboard_90s
+- 2000: https://public.tableau.com/app/profile/sergio7692/viz/2000SergioCarlos/Dashboard_00s
+- 2010: https://public.tableau.com/app/profile/sergio7692/viz/2010SergioCarlos/Dashboard_10s
+- Resumen 1980-2020: https://public.tableau.com/app/profile/sergio7692/viz/FinalSergioCarlos/Dashboard_FINAL
+- Enlace a google drive con los datos e imagenes: https://drive.google.com/drive/folders/1V-lubVWK8wIYO7ltDYv3nRo_J4QaQ8GO?usp=sharing
+- Enlace a la imagen de la base de datos: https://drive.google.com/file/d/1aMA4TwsL8nhSYS9Tog49TMc-Dq7kb8Sn/view?usp=sharing
+
+# Enlaces de interes:
+- Historia economica: http://countrystudies.us/brazil/
+- IDH: http://hdr.undp.org/en/indicators/137506#
+- Indicadores macroeconomicos: https://data.worldbank.org/
+- Presidentes: Wikipedia.com
